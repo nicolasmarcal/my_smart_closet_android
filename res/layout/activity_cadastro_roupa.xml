@@ -1,0 +1,59 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+	<LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@drawable/background">
+	    
+	    <TextView android:id="@+id/label_descricao_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_descricao_roupa"/>
+        <EditText android:id="@+id/descricao_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:inputType="text"/>
+	    
+        <TextView android:id="@+id/label_estilo_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_estilo_roupa"/>
+        <Spinner android:id="@+id/estilo_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/texto_combo"
+            />
+        
+        <TextView android:id="@+id/label_marca_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_marca_roupa"/>
+        <Spinner android:id="@+id/marca_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/texto_combo"
+            />
+        
+        <TextView android:id="@+id/label_material_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_material_roupa"/>
+        <Spinner android:id="@+id/material_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/texto_combo"
+            />
+        
+	    <TextView android:id="@+id/label_tipo_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_tipo_roupa"/>
+        <Spinner android:id="@+id/tipo_roupa"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/texto_combo"
+            />
+		
+	</LinearLayout>
+	
+</ScrollView>

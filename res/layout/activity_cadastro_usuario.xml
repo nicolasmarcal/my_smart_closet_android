@@ -1,0 +1,92 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@drawable/background">
+        
+        <TextView android:id="@+id/label_nome_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_nome_usuario"/>
+        <EditText android:id="@+id/nome_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:inputType="text"/>
+        
+        
+        <TextView android:id="@+id/label_email_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_email_usuario"/>
+        <EditText android:id="@+id/email_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+        
+        
+        <TextView android:id="@+id/label_senha_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_senha_usuario"/>
+        <EditText android:id="@+id/senha_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+        
+        
+        <TextView android:id="@+id/label_dt_nasc_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_dt_nasc_usuario"/>
+        <EditText android:id="@+id/dt_nasc_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:focusable="false"  
+			android:inputType="none"/>
+        
+        
+        <TextView android:id="@+id/label_peso_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_peso_usuario"/>
+        <EditText android:id="@+id/peso_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+        
+        <TextView android:id="@+id/label_altura_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_altura_usuario"/>
+        <EditText android:id="@+id/altura_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+		
+        
+        <TextView android:id="@+id/label_cor_olhos"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_cor_olhos_usuario"/>
+        <Spinner android:id="@+id/cor_olhos_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/texto_combo"
+            />
+        
+        <TextView android:id="@+id/label_cor_cabelo"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            style="@style/labels"
+            android:text="@string/label_cor_cabelo_usuario"/>
+        <Spinner android:id="@+id/cor_cabelo_usuario"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/texto_combo"
+            />
+        <Button
+		    android:id="@+id/salvar"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/btn_salvar"
+		    style="@style/botoes"
+		    android:background="@drawable/shape"
+		    android:onClick="cadastrarUsuario" />
+    </LinearLayout>
+    
+</ScrollView>

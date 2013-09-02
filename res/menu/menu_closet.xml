@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<item android:id="@+id/submenu_closet_cadastrar"
+	    android:title="@string/submenu_cadastrar"/>
+	<item android:id="@+id/submenu_closet_ver_todos"
+	    android:title="@string/submenu_ver_todas"/>    
+
+</menu>

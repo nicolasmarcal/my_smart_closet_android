@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_app" >
+	<Button
+	    android:id="@+id/meu_closet_btn"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/menu_meu_closet"
+	    style="@style/botoes"
+	    android:onClick="abreSubMenuCloset"
+	    android:background="@drawable/shape" />
+	<Button
+	    android:id="@+id/gerar_look_btn"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/menu_oq_vestir"
+	    style="@style/botoes"
+	    android:background="@drawable/shape" />
+	<Button
+	    android:id="@+id/meus_looks_btn"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/menu_meus_looks"
+	    style="@style/botoes"
+	    android:background="@drawable/shape" />
+</LinearLayout>

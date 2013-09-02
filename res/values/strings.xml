@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Smart Closet</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="my_smart_closet">My Smart Closet</string>
+    <string name="menu_meu_closet">Meu Closet</string>
+    <string name="menu_oq_vestir">O que vestir?</string>
+    <string name="menu_meus_looks">Meus Looks</string>
+    <string name="submenu_cadastrar">Adicionar Peça</string>
+    <string name="submenu_ver_todas">Ver Peças</string>
+    <string name="title_activity_cadastro_usuario">CadastroUsuarioActivity</string>
+    <string name="label_nome_usuario">Nome:</string>
+    <string name="label_email_usuario">E-mail:</string>
+    <string name="label_senha_usuario">Senha:</string>
+    <string name="label_dt_nasc_usuario">Data de Nascimento:</string>
+    <string name="label_altura_usuario">Altura(m):</string>
+    <string name="label_peso_usuario">Peso(kg):</string>
+    <string name="label_cor_olhos_usuario">Cor dos Olhos:</string>
+    <string name="label_cor_cabelo_usuario">Cor Cabelo:</string>
+    <string name="texto_combo">Selecione</string>
+    <string name="btn_salvar">Salvar</string>
+    <string name="title_activity_cadastro_roupa">Cadastro Peça de Roupa</string>
+    <string name="label_tipo_roupa">Tipo:</string>
+    <string name="label_descricao_roupa">Descrição:</string>
+    <string name="label_estilo_roupa">Estilo:</string>
+	<string name="label_marca_roupa">Marca:</string>
+	<string name="label_material_roupa">Material:</string>
+	
+</resources>
