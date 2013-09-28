@@ -64,13 +64,15 @@ public final class R {
     public static final class layout {
         public static final int activity_cadastro_roupa=0x7f030000;
         public static final int activity_cadastro_usuario=0x7f030001;
-        public static final int activity_menu=0x7f030002;
+        public static final int activity_gerar_look=0x7f030002;
+        public static final int activity_menu=0x7f030003;
     }
     public static final class menu {
         public static final int cadastro_roupa=0x7f070000;
         public static final int cadastro_usuario=0x7f070001;
-        public static final int menu=0x7f070002;
-        public static final int menu_closet=0x7f070003;
+        public static final int gerar_look=0x7f070002;
+        public static final int menu=0x7f070003;
+        public static final int menu_closet=0x7f070004;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -99,6 +101,7 @@ public final class R {
         public static final int texto_combo=0x7f050012;
         public static final int title_activity_cadastro_roupa=0x7f050014;
         public static final int title_activity_cadastro_usuario=0x7f050009;
+        public static final int title_activity_gerar_look=0x7f05001a;
     }
     public static final class style {
         /** 

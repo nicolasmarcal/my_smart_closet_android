@@ -17,7 +17,8 @@
 	    android:layout_height="wrap_content"
 	    android:text="@string/menu_oq_vestir"
 	    style="@style/botoes"
-	    android:background="@drawable/shape" />
+	    android:background="@drawable/shape"
+	    android:onClick="gerarLook" />
 	<Button
 	    android:id="@+id/meus_looks_btn"
 	    android:layout_width="fill_parent"

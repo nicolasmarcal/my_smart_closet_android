@@ -25,7 +25,8 @@
     <string name="label_tipo_roupa">Tipo:</string>
     <string name="label_descricao_roupa">Descrição:</string>
     <string name="label_estilo_roupa">Estilo:</string>
-	<string name="label_marca_roupa">Marca:</string>
-	<string name="label_material_roupa">Material:</string>
-	
+    <string name="label_marca_roupa">Marca:</string>
+    <string name="label_material_roupa">Material:</string>
+    <string name="title_activity_gerar_look">GerarLook</string>
+
 </resources>

@@ -64,6 +64,11 @@ public class MenuActivity extends Activity {
 		openContextMenu(v);
 	}
 	
+	public void gerarLook(View v){
+		Intent it = new Intent(MenuActivity.this, GerarLook.class);
+		startActivity(it);
+	}
+	
 	public void criaBanco(){
 		String destFile = Environment.getExternalStorageDirectory().toString().concat("/Android/data/mysmartcloset/database");
 		File pasta = new File(destFile);
@@ -99,7 +104,7 @@ public class MenuActivity extends Activity {
 	private void cadastroUsuario(){
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle("Aviso");
-		builder.setMessage("Para utilizar o aplicativo é necessário cadastro. Se cadastrar agora?");
+		builder.setMessage("Para utilizar o aplicativo ï¿½ necessï¿½rio cadastro. Se cadastrar agora?");
 		builder.setCancelable(false);
 		builder.setPositiveButton("Sim", new OnClickListener(){
 			@Override
@@ -109,7 +114,7 @@ public class MenuActivity extends Activity {
 				finish();
 			}
 		});
-		builder.setNegativeButton("Não", new OnClickListener(){
+		builder.setNegativeButton("Nï¿½o", new OnClickListener(){
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
 				finish();
