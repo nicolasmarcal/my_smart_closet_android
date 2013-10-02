@@ -4,14 +4,8 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.content.Context;
-import android.location.Location;
-import android.location.LocationManager;
-import android.widget.Toast;
 
 public class WeatherWebService {
 	private final static String URL = "http://api.openweathermap.org/data/2.5/weather?";
@@ -31,7 +25,7 @@ public class WeatherWebService {
 				temperatura = getFloat("temp", mainObj) - 273;
 			}
 		} catch(Exception e){
-			temperatura = 3;;
+			temperatura = 0;
 		}
 
 		return temperatura;

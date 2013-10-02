@@ -27,6 +27,6 @@
     <string name="label_estilo_roupa">Estilo:</string>
     <string name="label_marca_roupa">Marca:</string>
     <string name="label_material_roupa">Material:</string>
-    <string name="title_activity_gerar_look">GerarLook</string>
-
+    <string name="title_activity_gerar_look">Gerar Look</string>
+	<string name="title_oque_acha">O que acha de usar estas peças hoje?</string>
 </resources>

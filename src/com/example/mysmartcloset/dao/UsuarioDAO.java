@@ -33,7 +33,7 @@ public class UsuarioDAO extends DAO{
 		return db.insert(TABELA, null, values) > 0;
 	}
 	
-	public List<Usuario> listarUsuarios(){
+	public static List<Usuario> listarUsuarios(){
 		Cursor c = db.query(TABELA, COLS, null, null, null, null, null, null);
 		List<Usuario> usuarios = new ArrayList<Usuario>();
 		if(c.moveToFirst()) {

@@ -1,6 +1,11 @@
 package com.example.mysmartcloset;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.example.mysmartcloset.WebService.WeatherWebService;
+import com.example.mysmartcloset.WebService.webService;
 
 import android.location.Location;
 import android.location.LocationManager;
@@ -33,6 +38,7 @@ public class GerarLook extends Activity {
 	private AlertDialog alertDialog;
 	private AlertDialog alerta;
 	private ProgressDialog progressDialog;
+	private String text_look;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +118,44 @@ public class GerarLook extends Activity {
 	}
 	
 	public void getLook(){
+		new Thread(){
+			@Override
+			public void run(){
+				try{
+					JSONObject look = webService.gerar_look(ocasiao_id, temperatura, vestido);
+					if(look == null){
+						Toast.makeText(getApplicationContext(), "Não foi possível concluir. Verifique sua conexão", Toast.LENGTH_LONG).show();
+						finish();
+					} else {
+						text_look = descreveLook(look);
+						progressDialog.dismiss();
+					}
+				}catch(Exception e){
+					Toast.makeText(getApplicationContext(), "Não foi possível concluir. Verifique sua conexão", Toast.LENGTH_LONG).show();
+					finish();
+				}
+				runOnUiThread(new Runnable() {
+				    public void run() {
+				    	TextView text = (TextView) findViewById(R.id.look_result);
+						text.setText(text_look);
+				    }
+				});
+			}
+		}.start();
 		
+	}
+	
+	public String descreveLook(JSONObject look) throws JSONException{
+		JSONArray array = look.getJSONArray("roupas");
+		String texto_look = "";
+		for(int i = 0; i < array.length(); i++){
+			JSONObject roupa = array.getJSONObject(i);
+			
+			texto_look += "Peça " + (i+1) + ":\n";
+			texto_look += "Modelo: " + roupa.getString("modelo") + " " + roupa.getString("cor") + "\n";
+
+		}
+		return texto_look;
 	}
 	
 	public void showProgressDialog(){
@@ -131,7 +174,6 @@ public class GerarLook extends Activity {
 			double longitude = location.getLongitude();
 			double latitude = location.getLatitude();
 			temperatura = WeatherWebService.getWeather(latitude, longitude);
-			Toast.makeText(getApplicationContext(), "Temperatura:" + temperatura, Toast.LENGTH_LONG).show();
 		} else {
 			Toast.makeText(getApplicationContext(), "Não foi possível obter sua localização.", Toast.LENGTH_LONG).show();
 		}
