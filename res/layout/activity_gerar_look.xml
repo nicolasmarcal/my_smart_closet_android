@@ -9,7 +9,17 @@
             android:layout_width="fill_parent" android:layout_height="wrap_content"
             style="@style/labels"
             android:text="@string/title_oque_acha"/>
-	    
+	    <Gallery
+        	android:id="@+id/look_gallery"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content" />
+
+   	 	<ImageView
+        	android:id="@+id/look_image_view"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/gallery1" />
+   	 	
 	    <TextView android:id="@+id/look_result"
             android:layout_width="fill_parent" android:layout_height="wrap_content"
             style="@style/labels"/>

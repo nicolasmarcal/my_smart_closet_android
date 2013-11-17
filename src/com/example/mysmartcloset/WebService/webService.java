@@ -9,7 +9,7 @@ import org.json.JSONObject;
 import com.example.mysmartcloset.dao.UsuarioDAO;
 
 public class webService {
-	public final static String URL = "http://192.168.1.108:3000/";
+	public final static String URL = "http://192.168.1.102:3000/";
 	
 	public static JSONObject gerar_look(long ocasiao_id, float temperatura, boolean vestido){
 		JSONObject obj = null;

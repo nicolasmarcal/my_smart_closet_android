@@ -27,7 +27,7 @@ public final class R {
         public static final int shape=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f080020;
+        public static final int action_settings=0x7f080023;
         public static final int altura_usuario=0x7f080015;
         public static final int cor_cabelo_usuario=0x7f080019;
         public static final int cor_olhos_usuario=0x7f080017;
@@ -35,7 +35,8 @@ public final class R {
         public static final int dt_nasc_usuario=0x7f080011;
         public static final int email_usuario=0x7f08000d;
         public static final int estilo_roupa=0x7f080003;
-        public static final int gerar_look_btn=0x7f08001e;
+        public static final int gallery1=0x7f08001e;
+        public static final int gerar_look_btn=0x7f080021;
         public static final int label_altura_usuario=0x7f080014;
         public static final int label_cor_cabelo=0x7f080018;
         public static final int label_cor_olhos=0x7f080016;
@@ -49,17 +50,19 @@ public final class R {
         public static final int label_peso_usuario=0x7f080012;
         public static final int label_senha_usuario=0x7f08000e;
         public static final int label_tipo_roupa=0x7f080008;
-        public static final int look_result=0x7f08001c;
+        public static final int look_gallery=0x7f08001c;
+        public static final int look_image_view=0x7f08001d;
+        public static final int look_result=0x7f08001f;
         public static final int marca_roupa=0x7f080005;
         public static final int material_roupa=0x7f080007;
-        public static final int meu_closet_btn=0x7f08001d;
-        public static final int meus_looks_btn=0x7f08001f;
+        public static final int meu_closet_btn=0x7f080020;
+        public static final int meus_looks_btn=0x7f080022;
         public static final int nome_usuario=0x7f08000b;
         public static final int peso_usuario=0x7f080013;
         public static final int salvar=0x7f08001a;
         public static final int senha_usuario=0x7f08000f;
-        public static final int submenu_closet_cadastrar=0x7f080021;
-        public static final int submenu_closet_ver_todos=0x7f080022;
+        public static final int submenu_closet_cadastrar=0x7f080024;
+        public static final int submenu_closet_ver_todos=0x7f080025;
         public static final int tipo_roupa=0x7f080009;
         public static final int title_oque_acha=0x7f08001b;
     }

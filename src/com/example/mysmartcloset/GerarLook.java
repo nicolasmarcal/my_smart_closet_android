@@ -1,5 +1,9 @@
 package com.example.mysmartcloset;
 
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ArrayList;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,10 +25,17 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.view.Display;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Gallery;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -39,6 +50,7 @@ public class GerarLook extends Activity {
 	private AlertDialog alerta;
 	private ProgressDialog progressDialog;
 	private String text_look;
+	private ArrayList<String> lookUrls;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -127,8 +139,7 @@ public class GerarLook extends Activity {
 						Toast.makeText(getApplicationContext(), "Não foi possível concluir. Verifique sua conexão", Toast.LENGTH_LONG).show();
 						finish();
 					} else {
-						text_look = descreveLook(look);
-						progressDialog.dismiss();
+						lookUrls = descreveLook(look);
 					}
 				}catch(Exception e){
 					Toast.makeText(getApplicationContext(), "Não foi possível concluir. Verifique sua conexão", Toast.LENGTH_LONG).show();
@@ -137,7 +148,22 @@ public class GerarLook extends Activity {
 				runOnUiThread(new Runnable() {
 				    public void run() {
 				    	TextView text = (TextView) findViewById(R.id.look_result);
-						text.setText(text_look);
+						text.setText("foi!");
+						final ImageView iv = (ImageView) findViewById(R.id.look_image_view);
+						Display display = getWindowManager().getDefaultDisplay();
+						iv.setMaxHeight(display.getHeight());
+						iv.setMaxWidth(display.getWidth());
+						iv.setImageBitmap((Bitmap) getItem(lookUrls.get(0)));
+						
+						Gallery gallery = (Gallery) findViewById(R.id.look_gallery);
+						gallery.setAdapter(new ImageAdapter(getApplicationContext(), lookUrls));
+						gallery.setOnItemClickListener(new OnItemClickListener() {
+				            public void onItemClick(AdapterView parent, View v, int position, long id) {
+				                iv.setImageBitmap((Bitmap) getItem(lookUrls.get(position)));
+				            }
+				        });
+						progressDialog.dismiss();
+						
 				    }
 				});
 			}
@@ -145,14 +171,25 @@ public class GerarLook extends Activity {
 		
 	}
 	
-	public String descreveLook(JSONObject look) throws JSONException{
+	public Object getItem(String path) {
+		try {
+			URL url = new URL(path);
+			InputStream is = url.openStream();
+			Bitmap image = BitmapFactory.decodeStream(is);
+			is.close();
+			
+			return image;
+		} catch(Exception e) {
+			return null;
+		}
+	}
+	
+	public ArrayList<String> descreveLook(JSONObject look) throws JSONException{
 		JSONArray array = look.getJSONArray("roupas");
-		String texto_look = "";
+		ArrayList<String> texto_look = new ArrayList<String>();
 		for(int i = 0; i < array.length(); i++){
 			JSONObject roupa = array.getJSONObject(i);
-			
-			texto_look += "Peça " + (i+1) + ":\n";
-			texto_look += "Modelo: " + roupa.getString("modelo") + " " + roupa.getString("cor") + "\n";
+			texto_look.add(roupa.getString("caminho_imagem"));
 
 		}
 		return texto_look;
